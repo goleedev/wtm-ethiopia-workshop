@@ -1,5 +1,7 @@
 # 📝 React + TypeScript Todo App — Built for a React Basics Workshop
 
+![Todo App](/public/todo.png)
+
 This is a simple yet production-style Todo App built with React, TypeScript, and Vite.
 
 It was created as part of a live coding session in a React Fundamentals workshop, covering:
