@@ -1,8 +1,4 @@
-type Todo = {
-  id: number;
-  text: string;
-  done: boolean;
-};
+import type { Todo } from '../TodoApp';
 
 type TodoItemProps = {
   todo: Todo;
@@ -11,17 +7,15 @@ type TodoItemProps = {
 };
 
 export const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => {
+  const { id, text, done } = todo;
+
   return (
     <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-      <input
-        type="checkbox"
-        checked={todo.done}
-        onChange={() => onToggle(todo.id)}
-      />
-      <span style={{ textDecoration: todo.done ? 'line-through' : 'none' }}>
-        {todo.text}
+      <input type="checkbox" checked={done} onChange={() => onToggle(id)} />
+      <span style={{ textDecoration: done ? 'line-through' : 'none' }}>
+        {text}
       </span>
-      <button onClick={() => onDelete(todo.id)}>❌</button>
+      <button onClick={() => onDelete(id)}>❌</button>
     </li>
   );
 };

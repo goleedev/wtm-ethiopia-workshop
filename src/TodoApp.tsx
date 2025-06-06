@@ -4,7 +4,7 @@ import { AddTodoForm } from './components/AddTodoForm';
 import { TodoItem } from './components/TodoItem';
 import { TodoStats } from './components/TodoStats';
 
-type Todo = {
+export type Todo = {
   id: number;
   text: string;
   done: boolean;
